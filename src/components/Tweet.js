@@ -6,7 +6,7 @@ function Tweet() {
   }, []);
   const [items, setItems] = useState([]);
   const fetchItems = async () => {
-    const data = await fetch("/tweets");
+    const data = await fetch("https://vishnuapp-node.onrender.com/tweets");
     const items = await data.json();
     setItems(items);
   };
